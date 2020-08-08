@@ -1,0 +1,133 @@
+$title-color: #5d30dd;
+$second-color: #4b3a7c;
+
+@mixin card($bottom,$top) {
+    width: 100%;
+    background: #f6f6f6;
+    box-shadow:0px -4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: $bottom;
+    margin-top:$top;
+  }
+  .rateBody {
+    justify-content: space-between;
+    @include card(20px,20px);
+  }
+
+  @mixin text($family, $weight, $align, $size,$color) {
+    color: $color;
+    text-align: $align;
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: 17px;
+  }
+  
+  .titleRate {
+      padding: 10px 0 20px 0;
+    @include text('Lato', 900, Left, 18px,$second-color);
+  }
+  .textRates {
+   // padding: 0px 0 10px 0;
+  @include text('Lato', 0, center, 12px,$second-color);
+}
+
+.textuserRates {
+    // padding: 0px 0 10px 0;
+   @include text('Lato', 600, center, 15px,$second-color);
+ }
+
+.numberRate{
+   padding: 40px 0 10px 0;
+  @include text('Lato', 0, center, 80px,$second-color);
+}
+
+
+@mixin rates($p){
+    padding: $p;
+    text-align: center;
+    color: $second-color;
+}
+
+.rate{
+    @include rates(50px 0 10px 0)
+}
+.rate2{
+    font-size: 15px;
+    @include rates(0)
+
+
+}
+
+.rowRates{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ant-progress-success-bg, .ant-progress-bg{
+    background-color: #4b3a7c;
+
+}
+.buttonContact2 {
+    margin-top: 10px;
+  //  display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #35d8d0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: #34aaa4;
+      color: white;
+    }
+  }
+  .cardGray {
+      height: 100%;
+    width: 100%;
+    background: #E5E5E5;
+    border-radius: 10px 0px 0px 10px;
+    margin-left:28px;
+position: relative; 
+
+}
+.textbadRate{
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 13px;
+line-height: 12px;
+color: #1B1B1B;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+padding-left: 20px;
+}
+
+.textDate{
+    @include text('Lato', 0, Left, 12px,#727274 )
+}
+
+.moreRate{
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 12px;
+color: #35D8D0;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+padding-left: 20px;
+}
+
+.divider{
+    width: 80%;
+   border: 1px solid #dad9de;
+}
+

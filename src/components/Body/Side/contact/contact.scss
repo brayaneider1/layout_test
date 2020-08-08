@@ -1,0 +1,147 @@
+.contactBody {
+  width: 100%;
+  background: #5d30dd;
+  height: auto;
+  //box-shadow:0px -4px 12px rgba(0, 0, 0, 0.05);
+  padding-bottom: 0px;
+  border-radius: 0px 0px 10px 10px;
+  
+  /*   display: flex;
+    justify-content: center; */
+}
+
+.contactCall {
+  width: 100%;
+  background: #ffffff;
+  height: auto;
+  //box-shadow:0px -4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0;
+  margin-top: -10px;
+  position: inherit;
+
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactCall2{
+    width: 100%;
+    background: #ffffff;
+    height: auto;
+    //box-shadow:0px -4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+    margin-top: -5px;
+    border-radius: 0px 0px 10px 10px;
+    position: inherit;
+    display: block;
+    justify-content:space-between;
+    align-items: center;
+  }
+
+@mixin text($family, $weight, $size, $color) {
+  color: $color;
+  font-family: $family;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 17px;
+  position: relative;
+}
+
+.titleContact {
+  @include text("Roboto", 900, 20px, white);
+}
+
+.buttonContact3 {
+  margin-top: 50px;
+  //  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: rgb(29, 153, 75);
+    color: white;
+  }
+}
+.buttonContact4 {
+  margin-left: 100px;
+    background-color: #5d30dd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    &:hover {
+      background-color: rgb(29, 153, 75);
+      color: white;
+    }
+  }
+
+.textContact2 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 17px;
+  color: white;
+  padding-left: 10px;
+  position: relative;
+  @media screen and (max-width: 1700px) {
+    visibility: hidden;
+    position: fixed;
+  }
+}
+
+
+@mixin text($family, $weight, $align, $size,$color) {
+    color: $color;
+    text-align: $align;
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: 17px;
+  }
+
+
+  .titleContacme {
+    @include text('Roboto', 900, center, 25px,#ffffff);
+  
+  }
+
+  .textCallme {
+  @include text('Roboto', 600, center, 18px,#5d30dd);
+
+}
+  .textContacme {
+      margin-left:30px ;
+      padding-top: 50px;
+    @include text('Roboto', 400, center, 14px,#5d30dd);
+  
+  
+}
+
+
+
+.contactIcon{
+    color:#5D30DD ;
+    margin-left: 20px;
+}
+.mailIcon{
+    color:rgb(255, 255, 255) ;
+    margin-left: 10px;
+}
+
+.banner{
+  padding:0 40px 0 40px ;
+  @media screen and (max-width: 490px) {
+    visibility: hidden;
+  }
+}

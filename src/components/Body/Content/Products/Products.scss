@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap");
+
+$title-color: #5d30dd;
+$second-color: #4b3a7c;
+
+
+
+@mixin text($family, $weight, $align, $size,$color) {
+  color: $color;
+  text-align: $align;
+  font-family: $family;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 17px;
+}
+
+.titleProduct {
+  @include text('Roboto', 900, center, 20px,$title-color);
+
+}
+.textPatterns {
+  @include text('Roboto', 600, center, 15px,$title-color);
+}
+
+@mixin card($bottom) {
+  width: 100%;
+  background: #f6f6f6;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: $bottom;
+}
+.productBody {
+  justify-content: space-between;
+  @include card(-10px);
+}
+
+@mixin cardCustom($width, $height, $color1, $color2, $img) {
+  width: $width;
+  height: $height;
+  background: linear-gradient(0deg, $color1, $color2), url($img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 30%;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+}
+.cardSecure {
+  @include cardCustom(
+    100%,
+    355px,
+    #4b3a7c8c,
+    #4b3a7c8c,
+    "https://image.freepik.com/foto-gratis/hombre-auto-roto-hablando-telefono_23-2148514933.jpg"
+  );
+
+}
+
+.cardPg1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include cardCustom(
+    100%,
+    170px,
+    #30aba5a6,
+    #30aba5a6,
+    "https://image.freepik.com/foto-gratis/familia-usando-desinfectante-usando-mascaras-medicas_23-2148574010.jpg"
+  );
+}
+.cardPg2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include cardCustom(
+    100%,
+    170px,
+    #30aba5a6,
+    #30aba5a6,
+    "https://image.freepik.com/foto-gratis/joven-medico-apoyando-su-paciente_1098-2237.jpg"
+  );
+}
+.cardPg3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include cardCustom(
+    100%,
+    170px,
+    #30aba5a6,
+    #30aba5a6,
+    "https://image.freepik.com/foto-gratis/adorable-pareja-madura-bailando-juntos_23-2148388890.jpg"
+  );
+}
+.cardPg4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include cardCustom(
+    100%,
+    170px,
+    #30aba5a6,
+    #30aba5a6,
+    "https://image.freepik.com/foto-gratis/viaje-avion-avion-viaje_53876-30273.jpg"
+  );
+}
+
+
+
+.textPg {
+  @include text(Lato, 600, center, 15px,white);
+}
+
+.textSecure {
+  @include text(Lato, 600, left, 18px,white);
+}
+.descSecure {
+  padding: 50px 0 20px 0;
+  @include text("Roboto", normal, left, 15px,white);
+}
+
+.textYear{
+  @include text(Lato, 200, left, 13px,$second-color);
+}
+
+.car {
+  height: 18px;
+  padding-left: 20px;
+}
+
+.buttonContact {
+  margin-top: 50px;
+//  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: #35d8d0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: #34aaa4;
+    color: white;
+  }
+}
+
+.buttonMore {
+  margin-top: 10px;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  position: inherit;
+  background-color: #5d30dd;
+  color: white;
+  border: none;
+  position: inherit;
+  border-radius: 5px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: rgb(85, 49, 185);
+    color: white;
+  }
+}
+
+.textContact {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: white;
+  padding-left: 10px;
+  position: relative;
+  @media screen and (max-width: 1700px) and (min-width: 1490px)  {
+    visibility: hidden;
+    position: fixed;
+  }
+  @media screen and (max-width: 600px) {
+    visibility: hidden;
+    position: fixed;
+  }
+  @media screen and (max-width: 1490px)  and (min-width: 601px) {
+    visibility: visible;
+    position: relative;
+  }
+}
+
+.colReceived{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 200px;
+  @media screen and (max-width: 1800px) {
+    margin-left: 0px;
+  }
+  @media screen and (max-width: 1700px) {
+    visibility: hidden;
+    position: fixed;
+  }
+}
+
+.callReceived {
+ 
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-bottom:-100px;
+  align-self: flex-end;
+  color: white;
+  font-weight: 500;
+  
+}
+
+.ball{
+  margin: 0 0px 0 20px;
+  background:white;
+  border-radius:100%;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  text-align:center;
+  transform:translate3d(0,0,0);
+  transition:transform ease-out 200ms;
+  filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.15));
+}

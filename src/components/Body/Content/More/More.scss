@@ -1,0 +1,107 @@
+@mixin cardCustom($width, $height, $color1, $color2, $img) {
+  width: $width;
+  height: $height;
+  background: linear-gradient(0deg, $color1, $color2), url($img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 30%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.cardSecure1 {
+  @include cardCustom(
+    100%,
+    221.29px,
+    #4b3a7c8c,
+    #4b3a7c8c,
+    "https://image.freepik.com/foto-gratis/hombre-auto-roto-hablando-telefono_23-2148514933.jpg"
+  );
+}
+
+.cardSecure2 {
+  @include cardCustom(
+    100%,
+    221.29px,
+    #4a3a7c00,
+    #4a3a7c00,
+    "https://image.freepik.com/foto-gratis/hombre-auto-roto-hablando-telefono_23-2148514933.jpg"
+  );
+}
+  .cardSecure3 {
+    @include cardCustom(
+      100%,
+      162px,
+      #4b3a7c8c,
+      #4b3a7c8c,
+      "https://image.freepik.com/foto-gratis/hombre-auto-roto-hablando-telefono_23-2148514933.jpg"
+    );
+  }
+  .cardSecure4 {
+    @include cardCustom(
+      100%,
+      162px,
+      #4b3a7c8c,
+      #4b3a7c8c,
+      "https://image.freepik.com/foto-gratis/hombre-auto-roto-hablando-telefono_23-2148514933.jpg"
+    );
+  }
+
+  .cardPg11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include cardCustom(
+      100%,
+      170px,
+      #30aba5a6,
+      #30aba5a6,
+      "https://image.freepik.com/foto-gratis/familia-usando-desinfectante-usando-mascaras-medicas_23-2148574010.jpg"
+    );
+  }
+
+
+  @mixin text($family, $weight, $align, $size,$color) {
+    color: $color;
+    text-align: $align;
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: 17px;
+  }
+
+  .descMore {
+      padding: 10px 0 10px 0;
+    @include text(Lato, 100, left, 15px,white);
+  }
+  .textArticle {
+  @include text(Lato, 200, left, 15px,white);
+}
+
+
+.buttonviewMore {
+    margin-top: 10px;
+    height: 50px;
+    width: 20%;
+    background-color: #35d8d0;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    justify-content: center;
+    &:hover {
+      background-color: #34aaa4;
+      color: white;
+    }
+  }
+
+  .textviewMore {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+    padding-left: 10px;
+  }
+
